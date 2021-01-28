@@ -11,7 +11,7 @@ import {
     NavBtnLink
 } from "./NavbarElements"
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
         <>
             <Nav>
@@ -20,7 +20,7 @@ const Navbar = () => {
                         MKash
                     </NavLogo>
 
-                    <MobileIcon>
+                    <MobileIcon onClick= {toggle}>
                         <FaBars />
                     </MobileIcon>
 
