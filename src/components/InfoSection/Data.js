@@ -8,9 +8,9 @@ export const HomeObjOne = {
     description: 'Access our exclusive app that allow you to make unlimited transactions with the lowest transactions',
     buttonLabel: 'Get Started',
     imgStart: false,
-    img: require('../../images/svg-1.svg'),
-    alt: 'Car',
-    dark: true,
+    img: require('../../images/transaction.svg'),
+    alt: 'Transaction',
+    dark: false,
     primary: true,
     darkText: false,
 }
