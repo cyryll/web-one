@@ -1,0 +1,16 @@
+export const HomeObjOne = {
+    id: 'about',
+    lightBg: false,
+    lightText: true,
+    lightTextDesc: true,
+    topline: 'Premium Bank',
+    headline: 'Unlimited Transactions with low fees',
+    description: 'Access our exclusive app that allow you to make unlimited transactions with the lowest transactions',
+    buttonLabel: 'Get Started',
+    imgStart: false,
+    img: require('../../images/svg-1.svg'),
+    alt: 'Car',
+    dark: true,
+    primary: true,
+    darkText: false,
+}
