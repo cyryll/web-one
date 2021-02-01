@@ -21,8 +21,12 @@ import {
     SocialMediaWrap,
     WebsiteRights
 } from './FooterElemants'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Footer = () => {
+    const toggleHome = () => {
+        scroll.scrollToTop()
+    }
     return (
         <FooterContainer>
             <FooterWrapper>
@@ -65,7 +69,7 @@ const Footer = () => {
                 </FooterLinksContainer>
                 <SocialMedia>
                     <SocialMediaWrap>
-                        <SocialLogo to='/'>
+                        <SocialLogo to='/' onClick={toggleHome}>
                             MKash
                         </SocialLogo>
                         <WebsiteRights>Mkash Copyright &copy; {new Date().getFullYear()}
