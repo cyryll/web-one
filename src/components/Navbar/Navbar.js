@@ -1,4 +1,5 @@
 import {FaBars} from 'react-icons/fa'
+import {useEffect, useState} from 'react';
 import {
     Nav,
     NavLogo,
@@ -10,11 +11,27 @@ import {
     NavBtn,
     NavBtnLink
 } from "./NavbarElements"
+import { IconContext } from 'react-icons/lib';
 
 const Navbar = ({toggle}) => {
+    const [scrollNav, setscrollNav] = useState(false)
+
+    const ChangeNav = () => {
+        if(window.scrollY >= 80) {
+            setscrollNav(true)
+        }else{
+            setscrollNav(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', ChangeNav)
+    }, [])
     return (
         <>
-            <Nav>
+        {/* Sets the properties of icons */}
+        <IconContext.Provider value = {{color: '#fff' }}>
+            <Nav scrollNav=  {scrollNav}>
                 <NavbarContainer>
                     <NavLogo to="/">
                         MKash
@@ -43,7 +60,7 @@ const Navbar = ({toggle}) => {
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
-
+            </IconContext.Provider>
         </>
     )
 }
